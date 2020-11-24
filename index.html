@@ -10,17 +10,62 @@
     <div class="container">
         <div class="title">Счётчик калорий</div>
         <div class="block-content">
-            <div class="sex">
+            <form>
+            <div class="gender-title">
                 Пол
             </div>
-            <div class="sex-select">
-                <button>Мужчина</button>
-                <button>Женщина</button>
+            <div class="gender-select">
+                <button class="active" type="button" id="man-button">Мужчина</button>
+                <button type="button" id="woman-button">Женщина</button>
             </div>
+            <div class="parameters">
+                <div class="param-age">
+                    <span><label for="age-input">Возраст</label></span> лет<br>
+                    <input type="number" id="age-input">
+                </div>
+                <div class="param-height">
+                    <span><label for="height-input">Рост</label></span> см<br>
+                    <input type="number" id="height-input">
+                </div>
+                <div class="param-weight" >
+                    <span><label for="weight-input">Вес</label></span> кг<br>
+                    <input type="number" id="weight-input">
+                </div>
+            </div>
+            <div class="activity-title">
+                Физическая активность
+            </div>
+            <div class="activity-select">
+                <input type="radio" name="activity-value" id="min" data-index="1.2"><label for="min">Минимальная</label><br>
+                <span>Сидячая работа и нет нагрузок</span><br>
+
+                <input type="radio" name="activity-value" id="low" data-index="1.38"><label for="low">Низкая</label><br>
+                <span>Редкие, нерегулярные тренировки, активность в быту</span><br>
+
+                <input type="radio" name="activity-value" id="mid" data-index="1.46" checked><label for="mid">Средняя</label><br>
+                <span>Тренировки 3-5 раз в неделю</span><br>
+
+                <input type="radio" name="activity-value" id="high" data-index="1.64"><label for="high">Высокая</label><br>
+                <span>Тренировки 6-7 раз в неделю</span><br>
+
+                <input type="radio" name="activity-value" id="very-high" data-index="1.9"><label for="very-high">Очень высокая</label><br>
+                <span>Больше 6 тренировок в неделю и физическая работа</span><br>
+            </div>
+            <button class="result-button" type="button">
+                Рассчитать
+            </button>
+            <button class="clear-button" type="reset">
+                ✕ Очистить поля и расчёт
+            </button>
+            </form>
         </div>
         <div class="block-results">
-
+            <span class="result-title">Ваша норма калорий</span>
+            <div id="weight-maintenance"></div>
+            <div id="weight-loss"></div>
+            <div id="weight-gain"></div>
         </div>
     </div>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
