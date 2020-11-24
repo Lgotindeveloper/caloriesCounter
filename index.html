@@ -10,7 +10,7 @@
     <div class="container">
         <div class="title">Счётчик калорий</div>
         <div class="block-content">
-            <form>
+            <form onsubmit="calculateIndex(); return false">
             <div class="gender-title">
                 Пол
             </div>
@@ -21,15 +21,15 @@
             <div class="parameters">
                 <div class="param-age">
                     <span><label for="age-input">Возраст</label></span> лет<br>
-                    <input type="number" id="age-input">
+                    <input type="number" id="age-input" required>
                 </div>
                 <div class="param-height">
                     <span><label for="height-input">Рост</label></span> см<br>
-                    <input type="number" id="height-input">
+                    <input type="number" id="height-input" required>
                 </div>
                 <div class="param-weight" >
                     <span><label for="weight-input">Вес</label></span> кг<br>
-                    <input type="number" id="weight-input">
+                    <input type="number" id="weight-input" required>
                 </div>
             </div>
             <div class="activity-title">
@@ -51,7 +51,7 @@
                 <input type="radio" name="activity-value" id="very-high" data-index="1.9"><label for="very-high">Очень высокая</label><br>
                 <span>Больше 6 тренировок в неделю и физическая работа</span><br>
             </div>
-            <button class="result-button" type="button">
+            <button class="result-button" type="submit">
                 Рассчитать
             </button>
             <button class="clear-button" type="reset">
@@ -61,9 +61,16 @@
         </div>
         <div class="block-results">
             <span class="result-title">Ваша норма калорий</span>
-            <div id="weight-maintenance"></div>
-            <div id="weight-loss"></div>
-            <div id="weight-gain"></div>
+            <div class="results">
+                <div id="weight-maintenance">0 ккал</div>
+                <div id="weight-loss">0 ккал</div>
+                <div id="weight-gain">0 ккал</div>
+            </div>
+            <div class="results-under-text">
+                <div>поддержание веса</div>
+                <div>снижение веса</div>
+                <div>набор веса</div>
+            </div>
         </div>
     </div>
     <script src="assets/js/script.js"></script>
