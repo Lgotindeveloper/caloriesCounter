@@ -113,6 +113,11 @@ body {
     background-color: rgb(247, 151, 25);
 }
 
+.result-button a {
+    text-decoration: none;
+    color: white;
+}
+
 .result-button:focus,
 .gender-select button:nth-child(1):focus,
 .gender-select button:nth-child(2):focus,
