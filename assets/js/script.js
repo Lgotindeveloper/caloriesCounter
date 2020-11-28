@@ -32,6 +32,8 @@ function calculateIndex() {
     resultWeightGain.innerHTML = DCIIndex + 300 + ' ккал';
     resultWeightLoss.innerHTML = DCIIndex - 300 + ' ккал';
 
+    location.hash = "#" + "results";
+
     
 }
 

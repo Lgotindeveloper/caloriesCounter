@@ -70,6 +70,8 @@ body {
     height: 35px;
     text-align: center;
     margin-top: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(247, 151, 25);
 }
 
 .parameters span {
